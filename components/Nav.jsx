@@ -28,35 +28,29 @@ const Nav = () => {
           height={30}
           className='object-contain'
         />
-        <p className='logo_text'>Promptopia</p>
+        <p className='logo_text'>NoteApp</p>
       </Link>
 
       {/* Desktop Navigation */}
       <div className='sm:flex hidden'>
         {session?.user ? (
-          <div className='flex gap-3 md:gap-5'>
-            <Link href='/create-prompt' className='black_btn'>
-              Create Post
-            </Link>
+            <div className='flex gap-3 md:gap-5'>
+                <Link href='/create-prompt' className='black_btn'>
+                    Создать запись
+                </Link>
+                <Link href='/profile' className='black_btn'>
+                    Профиль
+                </Link>
 
-            <button type='button' onClick={signOut} className='outline_btn'>
-              Sign Out
-            </button>
 
-            <Link href='/profile'>
-              <Image
-                src={session?.user.image}
-                width={37}
-                height={37}
-                className='rounded-full'
-                alt='profile'
-              />
-            </Link>
-          </div>
+                <button type='button' onClick={signOut} className='outline_btn'>
+                    Выйти
+                </button>
+            </div>
         ) : (
-          <>
-            {providers &&
-              Object.values(providers).map((provider) => (
+            <>
+                {providers &&
+                    Object.values(providers).map((provider) => (
                 <button
                   type='button'
                   key={provider.name}

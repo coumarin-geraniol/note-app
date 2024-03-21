@@ -4,15 +4,15 @@ import Nav from "@components/Nav";
 import Provider from "@components/Provider";
 
 export const metadata = {
-  title: "Promptopia",
-  description: "Discover & Share AI Prompts",
+  title: "NoteApp - Semahat",
+  description: "Discover & Share Prompts, Notes, Thoughts",
 };
 
 const RootLayout = ({ children }) => (
   <html lang='en'>
     <body>
       <Provider>
-        <div className='main'>
+        <div className='main bg-amber-100/[.4]'>
           <div className='gradient' />
         </div>
 
